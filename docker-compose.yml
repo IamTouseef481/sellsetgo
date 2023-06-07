@@ -1,0 +1,58 @@
+version: '3.9'
+x-default-options: &terminal
+  tty: true
+  stdin_open: true
+
+services:
+  backend:
+    <<: *terminal
+    container_name: sellsetgo-api-v2
+    build:
+      context: ./sellsetgo-api
+      dockerfile: ../dockerfiles/Dockerfile.elixir-dev
+    volumes:
+      - ./sellsetgo-api:/app
+      - ./ebay-xml-api-lib/ebay_xml_api:/ebay-xml-api-lib/ebay_xml_api
+    command: sh
+    ports:
+      - 443:4000
+      - 80:4001
+    depends_on:
+      - storage
+      - s3
+    environment:
+      - ERL_AFLAGS="-kernel shell_history enabled"
+      - POSTGRES_USER=dzine-hub
+      - POSTGRES_PASSWORD=dzinehub@123
+      - AWS_ACCESS_KEY_ID=minioadmin
+      - AWS_SECRET_ACCESS_KEY=minioadmin
+      - AWS_REGION=eu-west-2
+      - AWS_HOST=s3
+      - AWS_SCHEME=http://
+      - AWS_PORT=9000
+      - S3_HOST_DOMAIN_URL=65.0.175.203
+
+  s3:
+    container_name: sellsetgo-s3
+    image: minio/minio:latest
+    ports:
+      - 9000:9000
+    volumes:
+      - ./s3:/data
+    command: server /data
+    environment:
+      - MINIO_ACCESS_KEY=minioadmin
+      - MINIO_SECRET_KEY=minioadmin
+
+  storage:
+    container_name: sellsetgo-db
+    image: postgres:13.4-alpine
+    volumes:
+      - ./data:/var/lib/postgresql/data
+#    ports:
+#      - 5432:5432
+    environment:
+      - POSTGRES_USER=dzine-hub
+      - POSTGRES_PASSWORD=dzinehub@123
+    ports:
+      - '5555:5432'

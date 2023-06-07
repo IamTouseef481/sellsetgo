@@ -1,0 +1,22 @@
+0,EBAY_US,en-US,US,"eBay United States",active,USD,ebay.com,$
+2,EBAY_ENCA,en-CA,CA,"eBay Canada (English)",active,CAD,ebay.ca,C $
+3,EBAY_GB,en-GB,GB,"eBay UK",active,GBP,ebay.co.uk,£
+15,EBAY_AU,en-AU,AU,"eBay Australia",active,AUD,ebay.com.au,AU $
+16,EBAY_AT,de-AT,AT,"eBay Austria",active,EUR,ebay.at,€
+23,EBAY_FRBE,fr-BE,BE,"eBay Belgium (French)",active,EUR,ebay.fr,€
+71,EBAY_FR,fr-FR,FR,"eBay France",active,EUR,ebay.fr,€
+77,EBAY_DE,en-DE,DE,"eBay Germany",active,EUR,ebay.de,€
+100,EBAY_MOTOR,en-US,US,"eBay Motors",active,USD,ebay.com/motors,$
+101,EBAY_IT,it-IT,IT,"eBay Italy",active,EUR,ebay.it,€
+123,EBAY_NLBE,nl-BE,NL,"eBay Belgium (Dutch)",active,EUR,ebay.be,€
+146,EBAY_NL,nl-NL,NL,"eBay Netherlands",active,EUR,ebay.nl,€
+186,EBAY_ES,es-ES,ES,"eBay Spain",active,EUR,ebay.es,€
+193,EBAY_CH,de-CH,CH,"eBay Switzerland",active,CHF,ebay.ch,CHF
+201,EBAY_HK,zh-Hant,HK,"eBay Honk Kong",active,HKD,ebay.com.hk,$
+203,EBAY_IN,en-IN,IN,"eBay India",active,INR,ebay.in,₹
+205,EBAY_IE,en-IE,IE,"eBay Ireland",active,EUR,ebay.ie,€
+207,EBAY_MY,en-MY,MY,"eBay Malaysia",active,MYR,ebay.com.my,$
+210,EBAY_FRCA,fr-CA,CA,"eBay Canada (French)",active,CAD,ebay.ca,$
+211,EBAY_PH,en-PH,PH,"eBay Phillipines",active,PHP,ebay.ph,$
+212,EBAY_PL,pl-PL,PL,"eBay Poland",active,PLN,ebay.pl,$
+216,EBAY_SG,en-SG,SG,"eBay Singapore",active,SGD,ebay.com.sg,$

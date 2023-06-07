@@ -1,0 +1,7 @@
+FROM bitwalker/alpine-elixir-phoenix:1.12.2
+
+LABEL maintainer="Mangala Kader<mangala.kader@iteron.in>"
+
+WORKDIR /app
+
+RUN mix do local.hex --force, local.rebar --force, archive.install hex phx_new 1.5.9 --force
